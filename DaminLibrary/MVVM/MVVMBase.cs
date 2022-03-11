@@ -14,5 +14,9 @@ namespace DaminLibrary.MVVM
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+        public void Test() 
+        {
+        
+        }
     }
 }

@@ -68,8 +68,7 @@ namespace DaminLibrary.Common
         public byte[] GetBytes(Encoding encoding, ImageType imageType)
         {
             byte[] result = null;
-            try
-            {
+           
                 var postBytes = new List<byte>();
                 for (int i = 0; i <= Rows.Count - 1; i++)
                 {
@@ -150,10 +149,7 @@ namespace DaminLibrary.Common
                     memoryStream.Read(result, 0, result.Length);
                     memoryStream.Close();
                 }
-            }
-            catch (Exception exception) { }
-
-
+            
 
             //string test =encoding.GetString(result.ToArray());
             return result;

@@ -273,30 +273,6 @@ namespace DaminLibrary.Advance
             var filters = new List<Filter>() { filter };
             return FindSkip<T>(database, collection, filters, sort, skip, limit, cancellationToken);
         }
-        public long FindAllCount<T>(string name, CancellationToken cancellationToken = default)
-        {
-            IMongoCollection<T> getCollection = this.GetCollection<T>(name);
-            var count = getCollection.Find(_ => true).Count();
-            return count;
-        }
-        public long FindCount<T>(string name, string collectionName, Statuses statuses, CancellationToken cancellationToken = default)
-        {
-            return FindCount<T>(name, collectionName, statuses, null, cancellationToken);
-        }
-        public long FindCount<T>(string name, string collectionName, Statuses statuses, List<Filter> filterList, CancellationToken cancellationToken = default)
-        {
-            IMongoCollection<T> getCollection = this.GetCollection<T>(name, collectionName);
-            FilterDefinition<T> createFilterDefinition = this.CreateFilterDefinition<T>(statuses, filterList, cancellationToken);
-            long count = getCollection.Find(createFilterDefinition).Count();
-            return count;
-        }
-        public long FindCount<T>(string name, Statuses statuses, List<Filter> filterList, CancellationToken cancellationToken = default)
-        {
-            IMongoCollection<T> getCollection = this.GetCollection<T>(name);
-            FilterDefinition<T> createFilterDefinition = this.CreateFilterDefinition<T>(statuses, filterList, cancellationToken);
-            long count = getCollection.Find(createFilterDefinition).Count();
-            return count;
-        }
 
         /// <summary>
         /// 한가지 필드에 특정 값들 검색
