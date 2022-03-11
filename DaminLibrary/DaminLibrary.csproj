@@ -206,7 +206,6 @@
     <Compile Include="Expansion\OpenFileDialogExpansion.cs" />
     <Compile Include="Expansion\PropertyInfoExpansion.cs" />
     <Compile Include="Expansion\SaveFileDialogExpansion.cs" />
-    <Compile Include="Expansion\SnackBarExpansion.cs" />
     <Compile Include="Expansion\StringExpansion.cs" />
     <Compile Include="Expansion\TypeExpansion.cs" />
     <Compile Include="Expansion\UriBuilderExpansion.cs" />
