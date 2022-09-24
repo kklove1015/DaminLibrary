@@ -23,6 +23,7 @@ namespace DaminLibrary.Expansion
             byte[] getBytes = encoding.GetBytes(text);
             httpWebRequest.Write(getBytes);
         }
+        //test
         public static void Write(this HttpWebRequest httpWebRequest, string text)
         {
             httpWebRequest.Write(text, Encoding.Default);
